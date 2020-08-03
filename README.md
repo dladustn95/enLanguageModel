@@ -70,6 +70,6 @@ python interact.py --dataset_path DATAPATH/Name --model_checkpoint MODELPATH/
 Source|Target 형태로 txt파일 구성.
 
 아래의 형태로 같은 경로에 데이터가 존재해야 함.  
-Name_train.txt  / Name_train_keyword.txt
-Name_valid.txt  / Name_valid_keyword.txt
-Name_test.txt   / Name_test_keyword.txt
+Name_train.txt  / Name_train_keyword.txt  
+Name_valid.txt  / Name_valid_keyword.txt  
+Name_test.txt   / Name_test_keyword.txt  
