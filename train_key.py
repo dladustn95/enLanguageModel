@@ -21,7 +21,7 @@ from transformers import (AdamW, OpenAIGPTLMHeadModel, OpenAIGPTTokenizer, GPT2C
                                   GPT2LMHeadModel, GPT2Tokenizer, WEIGHTS_NAME, CONFIG_NAME,
                           BertTokenizer, BertModel)
 
-from bertgpt_utils import get_datasetEn, make_logdir
+from utils import get_datasetEn, make_logdir
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"

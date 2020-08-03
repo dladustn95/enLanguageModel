@@ -15,8 +15,8 @@ import torch
 import torch.nn.functional as F
 
 from transformers import OpenAIGPTLMHeadModel, GPT2Config, OpenAIGPTConfig, OpenAIGPTTokenizer, GPT2LMHeadModel, GPT2Tokenizer, BertTokenizer, BertModel
-from bertgpt_train import SPECIAL_TOKENS, build_input_from_segments, add_special_tokens_
-from bertgpt_utils import get_test_datasetEN2, download_pretrained_model
+from train import SPECIAL_TOKENS, build_input_from_segments, add_special_tokens_
+from utils import get_test_datasetEN2, download_pretrained_model
 
 def top_filtering(logits, top_k=0., top_p=0.9, threshold=-float('Inf'), filter_value=-float('Inf')):
     """ Filter a distribution of logits using top-k, top-p (nucleus) and/or threshold filtering

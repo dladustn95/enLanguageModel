@@ -21,7 +21,7 @@ from transformers import (AdamW, OpenAIGPTLMHeadModel, OpenAIGPTTokenizer, GPT2C
                                   GPT2LMHeadModel, GPT2Tokenizer, WEIGHTS_NAME, CONFIG_NAME,
                           BertTokenizer, BertModel)
 
-from bertgpt_utils import get_datasetEn2, make_logdir
+from utils import get_datasetEn2, make_logdir
 
 SPECIAL_TOKENS = ["<bos>", "<eos>", "<pad>"]
 ATTR_TO_SPECIAL_TOKEN = {'bos_token': '<bos>', 'eos_token': '<eos>', 'pad_token': '<pad>'}
