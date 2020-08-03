@@ -114,7 +114,6 @@ def train():
     parser.add_argument("--dataset_path", type=str, default="", help="Path or url of the dataset.")
     parser.add_argument("--use_adapter", type=bool, default=True, help="Use adapter or not")
     parser.add_argument("--keyword_module", type=str, default="", help="add, attention, ")
-    parser.add_argument("--model_checkpoint", type=str, default="EN_module", help="Path, url or short name of the model")
     parser.add_argument("--train_batch_size", type=int, default=20, help="Batch size for training")
     parser.add_argument("--valid_batch_size", type=int, default=20, help="Batch size for validation")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=8, help="Accumulate gradients on several steps")
@@ -239,7 +238,7 @@ def train():
         pbar.attach(trainer, metric_names=["loss"])
         evaluator.add_event_handler(Events.COMPLETED, lambda _: pbar.log_message("Validation: %s" % pformat(evaluator.state.metrics)))
 
-        log_dir = make_logdir(args.model_checkpoint, args.dataset_path, args.keyword_Module)
+        log_dir = make_logdir(args.gpt2_model_name, args.dataset_path, args.use_adapter, args.keyword_module)
         tb_logger = TensorboardLogger(log_dir)
 
         tb_logger.attach(trainer, log_handler=OutputHandler(tag="training", metric_names=["loss"]), event_name=Events.ITERATION_COMPLETED)

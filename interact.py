@@ -92,12 +92,12 @@ def sample_sequence(source, bert_tokenizer, model, bert_model, gpt_tokenizer, ar
 
 def run():
     parser = ArgumentParser()
-    parser.add_argument("--dataset_path", type=str, default="", help="Path or url of the dataset. If empty download from S3.")
+    parser.add_argument("--dataset_path", type=str, default="", help="Path or url of the dataset.")
     parser.add_argument("--use_adapter", type=bool, default=True, help="Use adapter or not")
     parser.add_argument("--keyword_Module", type=str, default="", help="add, attention, ")
     parser.add_argument("--model_checkpoint", type=str, default="", help="Path, url or short name of the model")
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu", help="Device (cuda or cpu)")
-    parser.add_argument("--gpt2_model_name", type=str, default="gpt2", help="Path, url or short name of the model ex)openai-gpt")
+    parser.add_argument("--gpt2_model_name", type=str, default="gpt2", help="name of the model ex)openai-gpt")
     parser.add_argument("--no_sample", action='store_true', help="Set to use greedy decoding instead of sampling")
     parser.add_argument("--max_length", type=int, default=40, help="Maximum length of the output utterances")
     parser.add_argument("--min_length", type=int, default=1, help="Minimum length of the output utterances")
