@@ -1,0 +1,5 @@
+torch
+pytorch-ignite==0.3.0
+transformers==2.5.1
+tensorboardX==1.8
+tensorflow  # for tensorboardX
