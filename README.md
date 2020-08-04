@@ -22,7 +22,7 @@ train의 argument:
 Argument | Type | Default value | Description
 ---------|------|---------------|------------
 dataset_path | `str` | `""` | Path or url of the dataset.
-use_adapter | `bool` | `True` | Use adapter or not
+use_adapter | `bool` | `False` | Use adapter or not
 keyword_module | `str` | `""` | Use keyword module or not
 train_batch_size | `int` | `20` | Batch size for training
 valid_batch_size | `int` | `20` | Batch size for validation
@@ -36,9 +36,11 @@ fp16 | `str` | `""` | Set to O0, O1, O2 or O3 for fp16 training (see apex docume
 local_rank | `int` | `-1` | Local rank for distributed training (-1: not distributed)
 gpt2_model_name | `str` | `"gpt2"` | Path, url or short name of the model
 
+  
+adapter 쓰고 싶으면 --use_adapter 붙이기
 ```bash
-python train.py --dataset_path DATAPATH/Name --use_adapter True
-python train_key.py --dataset_path DATAPATH/Name --use_adapter True --keyword_module attention
+python train.py --dataset_path DATAPATH/Name --use_adapter
+python train_key.py --dataset_path DATAPATH/Name --keyword_module attention
 ```
  
 ## 문장 생성 방법
