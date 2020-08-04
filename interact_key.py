@@ -141,8 +141,8 @@ def run():
     model.eval()
 
     sourceList, targetList, scoreList = get_test_datasetEN(bert_tokenizer, tokenizer, args.dataset_path)
-
-    f1 = open((args.model_checkpoint + "_output2.txt"), 'w')
+    current_time = datetime.now().strftime('%b%d_%H-%M-%S')
+    f1 = open((args.model_checkpoint + current_time + "_output.txt"), 'w')
     for line in zip(sourceList, targetList, scoreList):
         out_ids = sample_sequence(line[0], line[2], bert_tokenizer, model, bert_model, tokenizer, args)
         out_texts = tokenizer.decode(out_ids)
