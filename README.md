@@ -37,7 +37,8 @@ local_rank | `int` | `-1` | Local rank for distributed training (-1: not distrib
 gpt2_model_name | `str` | `"gpt2"` | Path, url or short name of the model
 
 ```bash
-python train.py --dataset_path DATAPATH/Name
+python train.py --dataset_path DATAPATH/Name --use_adapter True
+python train_key.py --dataset_path DATAPATH/Name --use_adapter True --keyword_module attention
 ```
  
 ## 문장 생성 방법
@@ -62,6 +63,7 @@ top_p | `float` | `0.9` | Nucleus filtering (top-p) before sampling (`<=0.0`: no
 
 ```bash
 python interact.py --dataset_path DATAPATH/Name --model_checkpoint MODELPATH/
+python interact_key.py --dataset_path DATAPATH/Name --model_checkpoint MODELPATH/
 ```
 
 ## 데이터 포맷
