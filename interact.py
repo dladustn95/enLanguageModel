@@ -130,7 +130,7 @@ def run():
     gpt_config = config_class.from_pretrained(args.model_checkpoint)
 
     model_class = GPT2LMHeadModel if "gpt2" in args.gpt2_model_name else OpenAIGPTLMHeadModel
-    model = model_class.from_pretrained(args.gpt2_model_name, config=gpt_config)
+    model = model_class.from_pretrained(args.model_checkpoint, config=gpt_config)
     model.to(args.device)
     add_special_tokens_(model, tokenizer)
     model.eval()
