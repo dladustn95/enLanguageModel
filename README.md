@@ -49,8 +49,6 @@ interact의 argument:
 Argument | Type | Default value | Description
 ---------|------|---------------|------------
 dataset_path | `str` | `""` | Path or url of the dataset.
-use_adapter | `bool` | `True` | Use adapter or not
-keyword_module | `str` | `""` | Use keyword module or not
 model_checkpoint | `str` | `""` | Path, url or short name of the model
 device | `str` | `cuda` if `torch.cuda.is_available()` else `cpu` | Device (cuda or cpu)
 gpt2_model_name | `str` | `"gpt2"` | name of the model ex)openai-gpt
