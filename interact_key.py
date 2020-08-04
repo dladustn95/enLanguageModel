@@ -10,6 +10,7 @@ from argparse import ArgumentParser
 from itertools import chain
 from pprint import pformat
 import warnings
+from datetime import datetime
 
 import torch
 import torch.nn.functional as F
@@ -98,8 +99,6 @@ def sample_sequence(source, score, bert_tokenizer, model, bert_model, gpt_tokeni
 def run():
     parser = ArgumentParser()
     parser.add_argument("--dataset_path", type=str, default="", help="Path or url of the dataset.")
-    parser.add_argument("--use_adapter", type=bool, default=True, help="Use adapter or not")
-    parser.add_argument("--keyword_Module", type=str, default="attention", help="add, attention, ")
     parser.add_argument("--model_checkpoint", type=str, default="", help="Path, url or short name of the model")
     parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu", help="Device (cuda or cpu)")
     parser.add_argument("--gpt2_model_name", type=str, default="gpt2", help="name of the model ex)openai-gpt")
