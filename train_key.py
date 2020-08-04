@@ -23,9 +23,6 @@ from transformers import (AdamW, OpenAIGPTLMHeadModel, OpenAIGPTTokenizer, GPT2C
 
 from utils import get_datasetEn, make_logdir
 
-os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-
 SPECIAL_TOKENS = ["<bos>", "<eos>", "<pad>"]
 ATTR_TO_SPECIAL_TOKEN = {'bos_token': '<bos>', 'eos_token': '<eos>', 'pad_token': '<pad>'}
 MODEL_INPUTS = ["source_ids", "target_ids", "lm_labels", "key_scores"]
