@@ -2,7 +2,7 @@
 
 ## Installation
 
-transformer 라이브러리 코드를 직접 수정하므로 가상환경 사용을 권장
+huggingface transformer 라이브러리 코드를 직접 수정하므로 가상환경 사용을 권장
 
 ```bash
 python -m venv .enLM
